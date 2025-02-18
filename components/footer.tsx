@@ -12,7 +12,7 @@ export function Footer() {
             <div className="w-28 h-10 bg-white/10 border border-white/20 rounded-xl transform hover:-rotate-3 transition-transform" />
           </div>
 
-          <p className="text-white/60 text-sm">© 2024 GrowVault Builder. All rights reserved.</p>
+          <p className="text-white/60 text-sm">© 2024 GrowVault Finance. All rights reserved.</p>
 
           <nav className="flex items-center gap-8">
             {links.map((link) => (

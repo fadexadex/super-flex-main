@@ -1,5 +1,6 @@
 import { FeatureSection } from "@/components/feature-section"
 import { AdvantagesSection } from "./components/advantages-section"
+import { PricingSection } from "@/components/pricing-section"
 import { StatsSection } from "@/components/stats-section"
 import { Hero } from "@/components/Hero"
 import { Footer } from "@/components/footer"
@@ -21,7 +22,13 @@ export default function Page() {
       <section id="roadmap">
         <RoadmapSection />
       </section>
+<<<<<<< Updated upstream
       <PartnersSection />
+=======
+      <section id="pricing">
+        <PricingSection />
+      </section>
+>>>>>>> Stashed changes
       <section id="stats">
         <StatsSection />
       </section>

@@ -128,21 +128,21 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute w-[120px] h-[120px] top-[11%] left-[12%] md:top-[18%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+          className="absolute w-[120px] h-[120px] top-[11%] left-[12%] md:top-[18%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] mb-8"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="absolute w-[80px] h-[80px] top-[7%] right-[2%] md:top-[6.5%] md:right-[8%] md:w-[132px] md:h-[132px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          className="absolute w-[80px] h-[80px] top-[7%] right-[2%] md:top-[6.5%] md:right-[8%] md:w-[132px] md:h-[132px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] "
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="absolute w-[120px] h-[120px] top-[10%] right-[4%] md:top-[16.5%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          className="absolute w-[120px] h-[120px] top-[10%] right-[4%] md:top-[10%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
         />
       </div>
     </>
