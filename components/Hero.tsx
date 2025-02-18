@@ -102,7 +102,7 @@ export function Hero() {
             <br/>
             Secure Your Future
           </p>
-          <RollingArrowButton className="bg-black text-white hover:bg-black/90 rounded-md px-4 py-2 text-base font-medium">
+          <RollingArrowButton className="bg-black text-white hover:bg-black/90 rounded-md px-6 py-2.5 text-[15px] font-medium">
             Get started
           </RollingArrowButton>
         </motion.div>

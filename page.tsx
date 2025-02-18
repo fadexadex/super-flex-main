@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero"
 import { Footer } from "@/components/footer"
 import { RoadmapSection } from "@/components/roadmap-section"
 import { Navbar } from "@/components/Navbar"
+import { PartnersSection } from "@/components/PartnersSection"
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <section id="roadmap">
         <RoadmapSection />
       </section>
+      <PartnersSection />
       <section id="stats">
         <StatsSection />
       </section>
