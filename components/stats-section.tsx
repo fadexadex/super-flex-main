@@ -60,7 +60,7 @@ export function StatsSection() {
         </h2>
         <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto px-4">
           Join thousands of satisfied customers who have transformed their ideas
-          with GrowVault Builder.
+          with GrowVault Finance.
         </p>
       </motion.div>
 

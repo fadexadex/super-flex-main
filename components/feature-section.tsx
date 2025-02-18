@@ -70,7 +70,7 @@ export function FeatureSection() {
   );
 
   return (
-    <section className="container mx-auto px-4 py-24 relative z-20 mt-48 md:mt-64">
+    <section className="container px-4 py-24 relative z-20 pt-64 md:pt-64">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
