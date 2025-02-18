@@ -58,18 +58,17 @@ const pricingPlans: PricingPlan[] = [
 
 export function PricingSection() {
   return (
-    <section className="py-24 relative">
-      <div
-        className="absolute inset-0 bg-gradient-to-b from-[#f8fee5] to-[#f4f8e2]"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at center, rgba(248, 254, 229, 0.8) 0%, rgba(244, 248, 226, 0.9) 100%)
-          `,
-        }}
-      />
+    <section id="pricing" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f8fee5] to-[#f4f8e2]" />
 
       <div className="container px-4 mx-auto relative z-10">
-        <div className="flex flex-col items-center text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center text-center mb-16"
+        >
           <Badge
             variant="outline"
             className="bg-[#F4B659]/90 hover:bg-[#F4B659] border-none text-zinc-900 mb-4 px-4 py-1 text-sm font-medium uppercase tracking-wide"
@@ -82,9 +81,15 @@ export function PricingSection() {
           <p className="text-zinc-600 max-w-2xl text-lg leading-relaxed">
             We offer flexible pricing plans that align with where your business stands today and where it's headed.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid md:grid-cols-3 gap-8"
+        >
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -123,7 +128,7 @@ export function PricingSection() {
               <p className="text-center text-zinc-500 text-xs mt-4 italic">*No commitment – cancel anytime*</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

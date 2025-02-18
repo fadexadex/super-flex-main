@@ -41,22 +41,32 @@ const faqs = [
 
 export function FaqsSection() {
   return (
-    <div className="relative overflow-hidden bg-[#efefef] py-24">
+    <div id="faqs" className="relative overflow-hidden bg-[#efefef] py-24">
       <div className="container relative z-10 mx-auto px-4">
-        <div className="mb-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-medium text-[#F4B659]">
             <HelpCircle className="h-4 w-4 text-[#F4B659]" />
             FAQ'S
           </div>
           <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Got a quick question?</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            We're here to help you make the right decision. Explore our frequently asked questions and find answers
-            below.
+            We're here to help you make the right decision. Explore our frequently asked questions and find answers below.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Large curved rectangle container */}
-        <div className="mx-auto max-w-3xl rounded-[2.5rem] bg-white/50 p-8 shadow-lg backdrop-blur-sm border border-white/20">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mx-auto max-w-3xl rounded-[2.5rem] bg-white/50 p-8 shadow-lg backdrop-blur-sm border border-white/20"
+        >
           <Accordion.Root type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <Accordion.Item key={index} value={`item-${index}`}>
@@ -93,11 +103,7 @@ export function FaqsSection() {
               </Accordion.Item>
             ))}
           </Accordion.Root>
-        </div>
-
-        {/* Decorative elements */}
-        <div className="pointer-events-none absolute right-0 top-0 h-64 w-64 bg-black/5 opacity-50 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 bottom-0 h-64 w-64 bg-black/5 opacity-50 blur-3xl" />
+        </motion.div>
       </div>
     </div>
   )
