@@ -6,7 +6,7 @@ import { Waves, ArrowUpRight, Activity, Boxes } from "lucide-react"
 const partners = [
   { name: "Bengee", Icon: Waves },
   { name: "Fadex", Icon: ArrowUpRight },
-  { name: "LanAY", Icon: Activity },
+  { name: "DevAY", Icon: Activity },
   { name: "Believe Studios", Icon: Boxes },
 ]
 

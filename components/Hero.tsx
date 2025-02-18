@@ -34,7 +34,7 @@ export function Hero() {
             duration: 0.5
           }
         }}
-        className="absolute z-30 w-[140px] h-[140px] top-[6%] left-[14%] md:top-[12%] md:left-[22%]"
+        className="absolute z-30 w-[140px] h-[140px] top-[3%] left-[14%] md:top-[7%] md:left-[22%]"
       >
         <div className="absolute bottom-0 w-[300%] h-32 left-[-100%]">
           <div className="absolute inset-0 bg-gradient-to-t from-[#FFD700]/20 to-transparent rounded-full blur-2xl" /> {/* Main gradient - reduced from 30% to 20% */}
@@ -67,7 +67,7 @@ export function Hero() {
             duration: 0.5
           }
         }}
-        className="absolute z-30 w-[140px] h-[88px] top-[5%] right-[1%] md:top-[8%] md:right-[24%]"
+        className="absolute z-30 w-[140px] h-[88px] top-[3%] right-[1%] md:top-[4%] md:right-[24%]"
       >
         <div className="absolute bottom-0 w-[300%] h-32 left-[-100%]">
           <div className="absolute inset-0 bg-gradient-to-t from-[#FFD700]/20 to-transparent rounded-full blur-2xl" /> {/* Main gradient - reduced from 30% to 20% */}
@@ -114,35 +114,35 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute w-[60px] h-[60px] top-[2%] left-[10%] md:top-[4%] md:left-[25%] md:w-[96px] md:h-[96px] bg-gradient-to-br from-black to-gray-900 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm"
+          className="absolute w-[60px] h-[60px] top-[2%] left-[10%] md:top-[2%] md:left-[10%] md:w-[96px] md:h-[96px] bg-gradient-to-br from-black to-gray-900 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute w-[80px] h-[80px] top-[7%] right-[80%] md:top-[8%] md:right-[84%] md:w-[164px] md:h-[164px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+          className="absolute w-[80px] h-[80px] top-[6%] right-[80%] md:top-[6%] md:right-[84%] md:w-[164px] md:h-[164px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute w-[120px] h-[120px] top-[11%] left-[12%] md:top-[18%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] mb-8"
+          className="absolute w-[120px] h-[120px] top-[7.5%] left-[12%] md:top-[10%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="absolute w-[80px] h-[80px] top-[7%] right-[2%] md:top-[6.5%] md:right-[8%] md:w-[132px] md:h-[132px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] "
+          className="absolute w-[80px] h-[80px] top-[1.5%] right-[2%] md:top-[3%] md:right-[8%] md:w-[132px] md:h-[132px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] "
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="absolute w-[120px] h-[120px] top-[10%] right-[4%] md:top-[10%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          className="absolute w-[120px] h-[120px] top-[6%] right-[4%] md:top-[10%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
         />
       </div>
     </>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
+import { Briefcase } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface DownloadButtonProps {
@@ -13,7 +13,7 @@ export function DownloadButton({
   variant = "white", 
   className, 
   isNew,
-  text = "Download Now" // Default text if none provided
+  text = "Download Now"
 }: DownloadButtonProps) {
   return (
     <motion.div
@@ -22,7 +22,7 @@ export function DownloadButton({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.2 }}
-      className="relative flex-1 min-w-[240px]" // Added flex-1 and min-width
+      className="relative flex-1 min-w-[240px]"
     >
       {isNew && (
         <motion.div
@@ -31,9 +31,7 @@ export function DownloadButton({
           transition={{ delay: 0.2 }}
           className="absolute -top-3 -right-2 z-10"
         >
-          <span className="bg-[#F7E353] text-black text-xs px-2 py-1 rounded-full font-medium">
-            New Product
-          </span>
+          
         </motion.div>
       )}
       
@@ -62,7 +60,7 @@ export function DownloadButton({
             repeatDelay: 3
           }}
         >
-          <Download className="mr-2 h-5 w-5" />
+          <Briefcase className="mr-2 h-5 w-5" />
         </motion.div>
         {text} 
         

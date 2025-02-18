@@ -17,7 +17,7 @@ export function FeatureSection() {
       description: "Watch your money grow faster with competitive returns.",
     },
     {
-      variant: "white",
+      variant: "orange", // Changed from "white" to "orange"
       transform: "rotate(0deg)",
       title: "Flexible Plans",
       description: "Save at your own pace with customizable options.",
@@ -70,14 +70,14 @@ export function FeatureSection() {
   );
 
   return (
-    <section className="container px-4 py-24 relative z-20 pt-64 md:pt-64">
+    <section className="container px-4 py-24 relative z-20 mt-64 md:mt-64">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-muted text-2xl md:text-3xl font-medium mb-8"
       >
-        Get them now:
+        Targets
       </motion.h2>
 
       <motion.div
@@ -89,16 +89,16 @@ export function FeatureSection() {
         <DownloadButton 
           variant="black" 
           isNew={true} 
-          text="Start Free Trial"
+          text="Startups"
         />
         <DownloadButton 
-          text="Premium Plan"
+          text="Investors"
         />
         <DownloadButton 
-          text="Business Plan"
+          text="Business"
         />
         <DownloadButton 
-          text="Enterprise"
+          text="Individuals"
         />
       </motion.div>
 
@@ -153,7 +153,7 @@ export function FeatureSection() {
                   onClick={() => handleCardClick(index)}
                 >
                   <FeatureCard
-                    variant={card.variant as "black" | "white"}
+                    variant={card.variant as "black" | "white" | "orange"}
                     transform="none"
                     index={position}
                     title={card.title}
