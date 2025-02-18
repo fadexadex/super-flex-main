@@ -17,7 +17,7 @@ export function StatCard({ variant = "white", name, percentage, description }: S
       <div className="flex flex-col gap-2 sm:gap-3">
         <div 
           className={`w-12 h-1 rounded-full transition-all duration-300 group-hover:w-16 ${
-            variant === "black" ? "bg-primary" : "bg-black/10"
+            variant === "black" ? "bg-[#F4B659]" : "bg-black/10"
           }`}
         />
         <h3 className="font-bold text-2xl sm:text-3xl lg:text-4xl tracking-tight">

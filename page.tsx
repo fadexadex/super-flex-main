@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { RoadmapSection } from "@/components/roadmap-section"
 import { Navbar } from "@/components/Navbar"
 import { PartnersSection } from "@/components/PartnersSection"
+import { FaqsSection } from "@/components/faqs-section"
 
 export default function Page() {
   return (
@@ -22,15 +23,15 @@ export default function Page() {
       <section id="roadmap">
         <RoadmapSection />
       </section>
-<<<<<<< Updated upstream
       <PartnersSection />
-=======
       <section id="pricing">
         <PricingSection />
       </section>
->>>>>>> Stashed changes
       <section id="stats">
         <StatsSection />
+      </section>
+      <section id="faqs">
+        <FaqsSection />
       </section>
       <Footer />
     </div>

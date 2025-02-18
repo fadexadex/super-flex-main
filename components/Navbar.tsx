@@ -59,6 +59,9 @@ export function Navbar() {
           <Link href="#stats" className="relative">
             <FlipText text="Stats" className="text-black text-sm font-medium" />
           </Link>
+          <Link href="#faqs" className="relative">
+            <FlipText text="FAQs" className="text-black text-sm font-medium" />
+          </Link>
         </div>
 
         <div className="flex items-center gap-2">
@@ -125,6 +128,13 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Stats
+              </Link>
+              <Link
+                href="#faqs"
+                className="text-black text-sm font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FAQs
               </Link>
               <Button
                 className="w-full bg-black text-white hover:bg-black/90 rounded-lg px-5 py-2.5 text-[15px] font-medium group"
