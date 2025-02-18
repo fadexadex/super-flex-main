@@ -45,7 +45,7 @@ export function Hero() {
           alt="Secure vault with golden handle"
           width={140}
           height={140}
-          className="select-none pointer-events-none opacity-90 relative z-10"
+          className="select-none pointer-events-none opacity-90 relative z-10 w-[60px] h-[60px] md:w-[140px] md:h-[140px]"
           priority
         />
       </motion.div>
@@ -67,7 +67,7 @@ export function Hero() {
             duration: 0.5
           }
         }}
-        className="absolute z-30 w-[140px] h-[88px] top-[4%] right-[16%] md:top-[8%] md:right-[24%]"
+        className="absolute z-30 w-[140px] h-[88px] top-[5%] right-[1%] md:top-[8%] md:right-[24%]"
       >
         <div className="absolute bottom-0 w-[300%] h-32 left-[-100%]">
           <div className="absolute inset-0 bg-gradient-to-t from-[#FFD700]/20 to-transparent rounded-full blur-2xl" /> {/* Main gradient - reduced from 30% to 20% */}
@@ -78,7 +78,7 @@ export function Hero() {
           alt="Credit Card"
           width={140}
           height={88}
-          className="select-none pointer-events-none opacity-90 relative z-10 rounded-xl"
+          className="select-none pointer-events-none opacity-90 relative z-10 rounded-xl w-[60px] h-[60px] md:w-[140px] md:h-[140px]"
           priority
         />
       </motion.div>
@@ -93,12 +93,14 @@ export function Hero() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
             Growvault
             <br />
-            Builder
+            Finance
           </h1>
           <p className="text-gray-500 text-base md:text-lg max-w-md mx-auto mb-12">
-            Smart savings
+            Save Smart
             <br />
-            Bigger rewards
+            Grow Fast
+            <br/>
+            Secure Your Future
           </p>
           <RollingArrowButton className="bg-black text-white hover:bg-black/90 rounded-md px-4 py-2 text-base font-medium">
             Get started
@@ -112,7 +114,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute w-[60px] h-[60px] top-[3%] left-[12%] md:top-[4%] md:left-[25%] md:w-[96px] md:h-[96px] bg-gradient-to-br from-black to-gray-900 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm"
+          className="absolute w-[60px] h-[60px] top-[2%] left-[10%] md:top-[4%] md:left-[25%] md:w-[96px] md:h-[96px] bg-gradient-to-br from-black to-gray-900 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm"
         />
 
         <motion.div
@@ -126,7 +128,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute w-[120px] h-[120px] top-[12%] left-[12%] md:top-[18%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+          className="absolute w-[120px] h-[120px] top-[11%] left-[12%] md:top-[18%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
         />
 
         <motion.div
@@ -140,7 +142,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="absolute w-[120px] h-[120px] top-[13%] right-[4%] md:top-[16.5%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          className="absolute w-[120px] h-[120px] top-[10%] right-[4%] md:top-[16.5%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
         />
       </div>
     </>

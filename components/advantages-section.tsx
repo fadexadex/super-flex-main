@@ -32,7 +32,7 @@ function AdvantageCard({ icon, title, description }: AdvantageCardProps) {
 
 function ScrollingRow({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) {
   return (
-    <div className="relative overflow-hidden whitespace-nowrap py-4">
+    <div className="relative overflow-hidden whitespace-nowrap py-4 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
       <motion.div
         initial={{ x: direction === "left" ? 0 : "-50%" }}
         animate={{ x: direction === "left" ? "-50%" : "0%" }}
@@ -46,7 +46,7 @@ function ScrollingRow({ items, direction = "left" }: { items: string[]; directio
         {items.map((item, index) => (
           <span
             key={index}
-            className="inline-block px-6 py-2 mx-2 bg-[#d4d4d439] rounded-full text-black"
+            className="inline-block px-6 py-2 mx-2 bg-[#d4d4d439] backdrop-blur-[2px] rounded-full text-black"
           >
             {item}
           </span>
@@ -54,7 +54,7 @@ function ScrollingRow({ items, direction = "left" }: { items: string[]; directio
         {items.map((item, index) => (
           <span
             key={`repeat-${index}`}
-            className="inline-block px-6 py-2 mx-2 bg-[#d4d4d42a] rounded-full text-black"
+            className="inline-block px-6 py-2 mx-2 bg-[#d4d4d439] backdrop-blur-[2px] rounded-full text-black"
           >
             {item}
           </span>
@@ -105,7 +105,7 @@ export function AdvantagesSection() {
   ];
 
   return (
-    <section className="w-full py-16 bg-[#ffec5d1d]">
+    <section className="w-full py-16 bg-[#ffec5d1d] relative isolate">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-sm font-semibold tracking-wider text-[#1a1a1a] uppercase mb-3">
@@ -120,7 +120,7 @@ export function AdvantagesSection() {
             <AdvantageCard key={index} {...advantage} />
           ))}
         </div>
-        <div className="my-12">
+        <div className="my-12 relative">
           <ScrollingRow items={featuresRow1} direction="left" />
           <ScrollingRow items={featuresRow2} direction="right" />
         </div>

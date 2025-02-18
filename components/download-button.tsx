@@ -6,9 +6,15 @@ interface DownloadButtonProps {
   variant?: "black" | "white"
   className?: string
   isNew?: boolean
+  text?: string
 }
 
-export function DownloadButton({ variant = "white", className, isNew = false }: DownloadButtonProps) {
+export function DownloadButton({ 
+  variant = "white", 
+  className, 
+  isNew,
+  text = "Download Now" // Default text if none provided
+}: DownloadButtonProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -58,7 +64,7 @@ export function DownloadButton({ variant = "white", className, isNew = false }: 
         >
           <Download className="mr-2 h-5 w-5" />
         </motion.div>
-        Get from DigitalEyes
+        {text} 
         
         <motion.div
           className="absolute inset-0 bg-white/10"

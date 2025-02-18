@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ArrowRight, Menu, X } from "lucide-react"
 import { FlipText } from "./FlipText"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,14 +27,14 @@ export function Navbar() {
       transition={{
         duration: 0.3,
       }}
-      className={`fixed top-6 left-32 right-32 z-50 transition-all duration-300 rounded-xl shadow-xl bg-white/80 backdrop-blur-md`}
+      className={`fixed top-4 md:top-6 left-4 right-4 md:left-32 md:right-32 z-50 transition-all duration-300 rounded-xl shadow-xl bg-white/80 backdrop-blur-md`}
     >
-      <div className={`container mx-auto px-8 py-3 flex items-center justify-between transition-all duration-300 gap-12`}>
-        <div className="flex items-center gap-4">
-          <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg">G</span>
+      <div className={`container mx-auto px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 gap-4 md:gap-12`}>
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center">
+            <span className="text-white font-bold text-base md:text-lg">G</span>
           </div>
-          <span className="text-black font-bold text-lg">Grow Vault Builder</span>
+          <span className="text-black font-bold text-sm md:text-lg">Grow Vault Finance</span>
         </div>
 
         <div className={`hidden md:flex items-center transition-all duration-300 gap-12`}>
@@ -57,20 +58,78 @@ export function Navbar() {
           </Link>
         </div>
 
-        <Button 
-          className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-2.5 text-[15px] font-medium group"
-        >
-          Start Saving
-          <motion.span
-            className="ml-2 inline-block"
-            initial={{ x: 0 }}
-            whileHover={{ x: 5 }}
-            transition={{ duration: 0.1 }}
+        <div className="flex items-center gap-2">
+          <Button 
+            className="hidden md:flex bg-black text-white hover:bg-black/90 rounded-lg px-5 py-2.5 text-[15px] font-medium group"
           >
-            <ArrowRight className="h-4 w-4" />
-          </motion.span>
-        </Button>
+            Start Saving
+            <motion.span
+              className="ml-2 inline-block"
+              initial={{ x: 0 }}
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.1 }}
+            >
+              <ArrowRight className="h-4 w-4" />
+            </motion.span>
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </Button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-t"
+          >
+            <div className="flex flex-col px-4 py-4 gap-4">
+              <Link 
+                href="#features" 
+                className="text-black text-sm font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Features
+              </Link>
+              <Link 
+                href="#roadmap" 
+                className="text-black text-sm font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Roadmap
+              </Link>
+              <Link 
+                href="#stats" 
+                className="text-black text-sm font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Stats
+              </Link>
+              <Button 
+                className="w-full bg-black text-white hover:bg-black/90 rounded-lg px-5 py-2.5 text-[15px] font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Start Saving
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   )
 }

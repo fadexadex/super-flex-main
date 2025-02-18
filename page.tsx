@@ -1,4 +1,5 @@
 import { FeatureSection } from "@/components/feature-section"
+import { AdvantagesSection } from "./components/advantages-section"
 import { StatsSection } from "@/components/stats-section"
 import { Hero } from "@/components/Hero"
 import { Footer } from "@/components/footer"
@@ -12,6 +13,9 @@ export default function Page() {
       <Hero />
       <section id="features">
         <FeatureSection />
+      </section>
+      <section id="advantages">
+        <AdvantagesSection />
       </section>
       <section id="roadmap">
         <RoadmapSection />

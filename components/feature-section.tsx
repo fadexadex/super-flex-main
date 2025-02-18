@@ -70,12 +70,12 @@ export function FeatureSection() {
   );
 
   return (
-    <section className="container mx-auto px-4 py-24 relative z-20 mt-8 md:mt-32">
+    <section className="container mx-auto px-4 py-24 relative z-20 mt-48 md:mt-64">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-muted text-2xl md:text-3xl font-medium  mb-8"
+        className="text-muted text-2xl md:text-3xl font-medium mb-8"
       >
         Get them now:
       </motion.h2>
@@ -86,10 +86,20 @@ export function FeatureSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-24"
       >
-        <DownloadButton variant="black" isNew={true} />
-        <DownloadButton />
-        <DownloadButton />
-        <DownloadButton />
+        <DownloadButton 
+          variant="black" 
+          isNew={true} 
+          text="Start Free Trial"
+        />
+        <DownloadButton 
+          text="Premium Plan"
+        />
+        <DownloadButton 
+          text="Business Plan"
+        />
+        <DownloadButton 
+          text="Enterprise"
+        />
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">

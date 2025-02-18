@@ -11,9 +11,9 @@ interface RoadmapItem {
 
 export function RoadmapSection() {
   const roadmapItems: RoadmapItem[] = [
-    { quarter: "Q1", year: "2022", icon: "star", isLeft: true },
-    { quarter: "Q2", year: "2022", icon: "diamond", isLeft: false },
-    { quarter: "Q3", year: "2022", icon: "circle", isLeft: true },
+    { quarter: "Q1", year: "2025", icon: "star", isLeft: true },
+    { quarter: "Q2", year: "2025", icon: "diamond", isLeft: false },
+    { quarter: "Q3", year: "2025", icon: "circle", isLeft: true },
   ];
 
   const IconComponent = ({ type }: { type: RoadmapItem["icon"] }) => {
