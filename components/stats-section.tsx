@@ -1,31 +1,32 @@
 import { motion } from "framer-motion"
 import { StatCard } from "./stat-card"
 
+
 export function StatsSection() {
   const stats = [
     { 
       variant: "black", 
-      name: "Active Users", 
-      percentage: "100K+",
-      description: "Growing community of creators"
+      name: "Total Savings Growth", 
+      percentage: "$10M+",
+      description: "Helping businesses and individuals grow their savings beyond expectations."
     },
     { 
       variant: "white", 
-      name: "Pages Created", 
-      percentage: "500K+",
-      description: "Stunning landing pages built"
+      name: "Startups Empowered", 
+      percentage: "5000+",
+      description: "Thousands of small businesses and startups are securing their financial future with us."
     },
     { 
       variant: "black", 
-      name: "Conversion Rate", 
-      percentage: "15.5%",
-      description: "Average conversion increase"
+      name: "Average Returns in a Year", 
+      percentage: "15-20%",
+      description: "Smart investment strategies driving high-yield returns within 12 months."
     },
     { 
       variant: "white", 
-      name: "Customer Rating", 
+      name: "Financial Journeys", 
       percentage: "4.9/5",
-      description: "Based on 10K+ reviews"
+      description: "Every saver has a unique journey— we make yours a success story."
     },
   ]
 
@@ -58,8 +59,8 @@ export function StatsSection() {
           Our Impact in Numbers
         </h2>
         <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto px-4">
-          Join thousands of satisfied customers who have transformed their online presence
-          with our landing page builder.
+          Join thousands of satisfied customers who have transformed their ideas
+          with GrowVault Builder.
         </p>
       </motion.div>
 

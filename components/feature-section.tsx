@@ -1,41 +1,41 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { DownloadButton } from "@/components/download-button"
-import { FeatureCard } from "@/components/feature-card"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { DownloadButton } from "@/components/download-button";
+import { FeatureCard } from "@/components/feature-card";
 
 export function FeatureSection() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const cardTransforms = [
-    { 
-      variant: "black", 
+    {
+      variant: "black",
       transform: "rotate(-5deg)",
-      title: "Beautiful Design",
-      description: "Create stunning interfaces with our components"
+      title: " High-Yield Savings",
+      description: "Watch your money grow faster with competitive returns.",
     },
-    { 
-      variant: "white", 
+    {
+      variant: "white",
       transform: "rotate(0deg)",
-      title: "Easy to Use",
-      description: "Intuitive drag-and-drop interface"
+      title: "Flexible Plans",
+      description: "Save at your own pace with customizable options.",
     },
-    { 
-      variant: "white", 
+    {
+      variant: "white",
       transform: "rotate(5deg)",
-      title: "Fully Responsive",
-      description: "Looks great on all devices"
+      title: "Safe & Secure",
+      description: "Your funds are protected with top-tier security measures.",
     },
-  ]
+  ];
 
   const handleCardClick = (clickedIndex: number) => {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setActiveIndex((prev) => (prev + 1) % cardTransforms.length)
-    setTimeout(() => setIsAnimating(false), 600)
-  }
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setActiveIndex((prev) => (prev + 1) % cardTransforms.length);
+    setTimeout(() => setIsAnimating(false), 600);
+  };
 
   const SplashLines = () => (
     <svg
@@ -67,20 +67,20 @@ export function FeatureSection() {
         ))}
       </motion.g>
     </svg>
-  )
+  );
 
   return (
-    <section className="container mx-auto px-4 py-24 relative z-20">
-      <motion.h2 
+    <section className="container mx-auto px-4 py-24 relative z-20 mt-8 md:mt-32">
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-muted text-2xl md:text-3xl font-medium mb-8"
+        className="text-muted text-2xl md:text-3xl font-medium  mb-8"
       >
         Get them now:
       </motion.h2>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -93,7 +93,7 @@ export function FeatureSection() {
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -103,8 +103,11 @@ export function FeatureSection() {
             Transform your ideas into reality
           </h3>
           <p className="text-muted leading-relaxed">
-            Create stunning landing pages in minutes with our intuitive builder.
-            Drag and drop components, customize styles, and launch your page instantly.
+            At Growvault, we believe in the power of smart saving. Our platform
+            is designed to help individuals, startups, and small businesses grow
+            their funds efficiently within a year. With flexible saving plans,
+            high-yield returns, and expert financial strategies, we turn your
+            financial goals into reality.
           </p>
         </motion.div>
 
@@ -112,7 +115,9 @@ export function FeatureSection() {
           {isAnimating && <SplashLines />}
           <AnimatePresence mode="popLayout">
             {cardTransforms.map((card, index) => {
-              const position = (index - activeIndex + cardTransforms.length) % cardTransforms.length
+              const position =
+                (index - activeIndex + cardTransforms.length) %
+                cardTransforms.length;
               return (
                 <motion.div
                   key={index}
@@ -121,7 +126,7 @@ export function FeatureSection() {
                     width: "100%",
                     height: "100%",
                     cursor: "pointer",
-                    marginRight: "1rem" // Added margin to the right
+                    marginRight: "1rem", // Added margin to the right
                   }}
                   initial={false}
                   animate={{
@@ -145,11 +150,11 @@ export function FeatureSection() {
                     description={card.description}
                   />
                 </motion.div>
-              )
+              );
             })}
           </AnimatePresence>
         </div>
       </div>
     </section>
-  )
+  );
 }
