@@ -7,15 +7,21 @@ interface AdvantageCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  isFirst?: boolean;
+  isLast?: boolean;
 }
 
-function AdvantageCard({ icon, title, description }: AdvantageCardProps) {
+function AdvantageCard({ icon, title, description, isFirst, isLast }: AdvantageCardProps & { isFirst?: boolean; isLast?: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="p-6 border border-[#e5e7eb] bg-white"
+      className={`p-6 border border-[#e5e7eb] bg-white mt-4 ${ // Added mt-4 for top margin
+        isFirst ? 'rounded-tl-2xl rounded-bl-2xl' : ''
+      } ${ // Added mt-4 for top margin
+        isLast ? 'rounded-tr-2xl rounded-br-2xl' : ''
+      }`}
     >
       <div className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center mb-6">
         <div className="text-white">{icon}</div>
@@ -44,20 +50,20 @@ function ScrollingRow({ items, direction = "left" }: { items: string[]; directio
         className="inline-block"
       >
         {items.map((item, index) => (
-          <span
+          <div
             key={index}
-            className="inline-block px-6 py-2 mx-2 bg-[#d4d4d439] backdrop-blur-[2px] rounded-full text-black"
+            className="inline-block px-6 py-2 mx-2 bg-[#ece9e939] backdrop-blur-[2px] rounded-full text-black shadow-md" // Added shadow-md class
           >
             {item}
-          </span>
+          </div>
         ))}
         {items.map((item, index) => (
-          <span
+          <div
             key={`repeat-${index}`}
-            className="inline-block px-6 py-2 mx-2 bg-[#d4d4d439] backdrop-blur-[2px] rounded-full text-black"
+            className="inline-block px-6 py-2 mx-2 bg-[#ece9e939] backdrop-blur-[2px] rounded-full text-black shadow-md" // Added shadow-md class
           >
             {item}
-          </span>
+          </div>
         ))}
       </motion.div>
     </div>
@@ -68,21 +74,21 @@ export function AdvantagesSection() {
   const advantages = [
     {
       icon: <Star className="w-4 h-4" />,
-      title: "AI-Optimized Savings ",
+      title: "How does GrowVault help me grow my savings? ",
       description:
-        "Never miss an opportunity to save. Unlike traditional cards, our AI dynamically adjusts to maximize your savings on every purchase in real-time.",
+        "GrowVault offers high-yield savings plans that allow your money to grow through strategic investment models, ensuring maximum returns within a year.",
     },
     {
       icon: <BarChart2 className="w-4 h-4" />,
-      title: "Real-Time Insights – Smarter Spending",
+      title: "Can I withdraw my savings anytime?",
       description:
-        "Stay in control with detailed analytics. Winden provides transparent spending reports and intelligent insights to guide your financial decisions.",
+        "Yes! We offer flexible withdrawal options depending on your chosen plan. Some plans have fixed maturity periods, while others allow partial withdrawals without penalties.",
     },
     {
       icon: <RefreshCw className="w-4 h-4" />,
-      title: "Flexible Plans – Tailored for You",
+      title: "Is my money safe with GrowVault?",
       description:
-        "Adaptive plans adjust monthly, ensuring you always get the best savings, rewards, and maximum optimal value for your business needs.",
+        "Absolutely. We use top-tier encryption and security measures to protect your funds, ensuring every transaction is secure and reliable.",
     },
   ];
 
@@ -109,7 +115,7 @@ export function AdvantagesSection() {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-sm font-semibold tracking-wider text-[#1a1a1a] uppercase mb-3">
-            THE CLOVER ADVANTAGES
+            THE GROWVAULT EDGE
           </h2>
           <p className="text-2xl font-medium text-[#1a1a1a]">
             Why Choose Us?
@@ -117,7 +123,12 @@ export function AdvantagesSection() {
         </div>
         <div className="grid md:grid-cols-3 gap-0">
           {advantages.map((advantage, index) => (
-            <AdvantageCard key={index} {...advantage} />
+            <AdvantageCard 
+              key={index} 
+              {...advantage} 
+              isFirst={index === 0}
+              isLast={index === advantages.length - 1}
+            />
           ))}
         </div>
         <div className="my-12 relative">

@@ -6,38 +6,37 @@ import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const faqs = [
-    {
-      question: "How does GrowVault help me grow my savings?",
-      answer:
-        "GrowVault offers high-yield savings plans that allow your money to grow through strategic investment models, ensuring maximum returns within a year.",
-    },
-    {
-      question: "Can I withdraw my savings anytime?",
-      answer:
-        "Yes! We offer flexible withdrawal options depending on your chosen plan. Some plans have fixed maturity periods, while others allow partial withdrawals without penalties.",
-    },
-    {
-      question: "Is my money safe with GrowVault?",
-      answer:
-        "Absolutely. We use top-tier encryption and security measures to protect your funds, ensuring every transaction is secure and reliable.",
-    },
-    {
-      question: "What makes GrowVault different from a regular savings account?",
-      answer:
-        "Unlike traditional savings accounts, GrowVault offers higher returns, flexible plans, and strategic investment opportunities to help you grow your wealth faster.",
-    },
-    {
-      question: "Who can use GrowVault?",
-      answer:
-        "GrowVault is designed for individuals, startups, and small businesses looking to maximize their savings and investments effortlessly.",
-    },
-    {
-      question: "How do I get started?",
-      answer:
-        "Simply sign up, choose a savings plan that fits your goals, and start growing your wealth today!",
-    },
-  ];
-  
+  {
+    question: "How does GrowVault help me grow my savings?",
+    answer:
+      "GrowVault offers high-yield savings plans that allow your money to grow through strategic investment models, ensuring maximum returns within a year.",
+  },
+  {
+    question: "Can I withdraw my savings anytime?",
+    answer:
+      "Yes! We offer flexible withdrawal options depending on your chosen plan. Some plans have fixed maturity periods, while others allow partial withdrawals without penalties.",
+  },
+  {
+    question: "Is my money safe with GrowVault?",
+    answer:
+      "Absolutely. We use top-tier encryption and security measures to protect your funds, ensuring every transaction is secure and reliable.",
+  },
+  {
+    question: "What makes GrowVault different from a regular savings account?",
+    answer:
+      "Unlike traditional savings accounts, GrowVault offers higher returns, flexible plans, and strategic investment opportunities to help you grow your wealth faster.",
+  },
+  {
+    question: "Who can use GrowVault?",
+    answer:
+      "GrowVault is designed for individuals, startups, and small businesses looking to maximize their savings and investments effortlessly.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Simply sign up, choose a savings plan that fits your goals, and start growing your wealth today!",
+  },
+];
 
 export function FaqsSection() {
   return (
@@ -105,6 +104,12 @@ export function FaqsSection() {
           </Accordion.Root>
         </motion.div>
       </div>
+      <img
+        src="/Key.png" // Update this path to the correct image path
+        alt="Key with fingerprint"
+        className="absolute top-0 right-28 w-32 h-32 m-4"
+      />
+
     </div>
   )
 }
