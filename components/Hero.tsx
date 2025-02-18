@@ -114,35 +114,35 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute w-[60px] h-[60px] top-[2%] left-[10%] md:top-[2%] md:left-[10%] md:w-[96px] md:h-[96px] bg-gradient-to-br from-black to-gray-900 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm"
+          className="absolute w-[60px] h-[60px] top-[1%] left-[10%] md:top-[2%] md:left-[10%] md:w-[96px] md:h-[96px] bg-gradient-to-br from-black to-gray-900 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute w-[80px] h-[80px] top-[6%] right-[80%] md:top-[6%] md:right-[84%] md:w-[164px] md:h-[164px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+          className="absolute w-[80px] h-[80px] top-[4.5%] right-[80%] md:top-[6%] md:right-[84%] md:w-[164px] md:h-[164px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute w-[120px] h-[120px] top-[7.5%] left-[12%] md:top-[10%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+          className="absolute w-[120px] h-[120px] top-[6%] left-[12%] md:top-[10%] md:left-[20%] md:w-[196px] md:h-[196px] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="absolute w-[80px] h-[80px] top-[1.5%] right-[2%] md:top-[3%] md:right-[8%] md:w-[132px] md:h-[132px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] "
+          className="absolute w-[60px] h-[60px] top-[2.5%] right-[2%] md:top-[3%] md:right-[8%] md:w-[132px] md:h-[132px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] "
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="absolute w-[120px] h-[120px] top-[6%] right-[4%] md:top-[10%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          className="absolute w-[120px] h-[120px] top-[5%] right-[4%] md:top-[10%] md:right-[8%] md:w-[264px] md:h-[264px] bg-black rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
         />
       </div>
     </>
